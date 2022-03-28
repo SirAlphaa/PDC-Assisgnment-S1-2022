@@ -1,2 +1,2 @@
 This is a test
-This is burger
+This is hotdog
