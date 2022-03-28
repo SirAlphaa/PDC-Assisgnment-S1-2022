@@ -1,4 +1,4 @@
-
+package utility;
 
 public class Main {
     
@@ -7,31 +7,33 @@ public class Main {
         //==Opening Title Screen===================================================================     
         String title = "     Dungeons and Dangers!!!";
         String titleLine = "=================================";
-        char[] titleArray = new char[title.length()];
-        for (int i = 0; i < title.length(); i++) {
-            titleArray[i] = title.charAt(i);
-        }
-        char[] titleLineArray = new char[titleLine.length()];
-        for (int i = 0; i < titleLine.length(); i++) {
-            titleLineArray[i] = titleLine.charAt(i);
-        }
+
+        PrintText.oneByOne(title, 30);
+        // char[] titleArray = new char[title.length()];
+        // for (int i = 0; i < title.length(); i++) {
+        //     titleArray[i] = title.charAt(i);
+        // }
+        // char[] titleLineArray = new char[titleLine.length()];
+        // for (int i = 0; i < titleLine.length(); i++) {
+        //     titleLineArray[i] = titleLine.charAt(i);
+        // }
 
         clearScreen();
 
-        for (char c : titleLineArray) {
-            System.out.print(c);
-            sleep(30);
-        }
-        System.out.println("");
-        for (char c : titleArray) {
-            System.out.print(c);
-            sleep(30);
-        }
-        System.out.println("");
-        for (char c : titleLineArray) {
-            System.out.print(c);
-            sleep(30);
-        }
+        // for (char c : titleLineArray) {
+        //     System.out.print(c);
+        //     sleep(30);
+        // }
+        // System.out.println("");
+        // for (char c : titleArray) {
+        //     System.out.print(c);
+        //     sleep(30);
+        // }
+        // System.out.println("");
+        // for (char c : titleLineArray) {
+        //     System.out.print(c);
+        //     sleep(30);
+        // }
 
         // clearScreen();
         // System.out.print("Hello");
