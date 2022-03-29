@@ -1,4 +1,4 @@
-public class SlowPrint {
+public class FancyPrint {
 
     // This method prints the inputed string char by char with a delay set by the interval
     public static void setDelay(String text, int interval) {
@@ -28,7 +28,22 @@ public class SlowPrint {
         }
     }
 
-    public static void sleep(int n) {
+    public static void userInputArea() {
+        System.out.print("\n -> ");
+    }
+
+    //This method takes in just a string and prints it like normal
+    public static void normal(String str) {
+        System.out.print(str);
+    }
+
+    //Just prints out a new line lol
+    public static void newLine() {
+        System.out.println("");
+    }
+
+    //sleep function for the delay print methods 
+    private static void sleep(int n) {
         try {
             Thread.sleep(n);
         } catch (InterruptedException e) {
