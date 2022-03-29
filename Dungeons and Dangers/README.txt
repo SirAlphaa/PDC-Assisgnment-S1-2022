@@ -13,11 +13,12 @@ Storyboard
     1) Starts Up
     2) Existing or new character
     3) Make or load character
-    4) Pick which to conquer
+    4) Pick which place to conquer
     5) Game starts
 
 Classes
-- Main (main menu)
+- Main (Has the main flow of the program)
+- FancyPrint (Allows us to print to console how we would like and make it easier to do so)
 - Cave (master)
 - UserCharacter (Master)
 - Enemies (Master)
