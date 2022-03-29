@@ -4,9 +4,11 @@ import java.util.Scanner;
         //TODO: Make a Quit Expection, we will make it towards the end of the project
         //TODO: Make a method that prints out Credits to us xD
 
-public class Main {
+public class Main 
+{
     
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
     
         Scanner uInput = new Scanner(System.in);
         
@@ -19,7 +21,8 @@ public class Main {
         uInput.close();
     }
 
-    public static void openingScren() {
+    public static void openingScren() 
+    {
         clearScreen();
         System.out.print("Loading, please wait");
         FancyPrint.setDelay(".....", 700, true);
@@ -41,15 +44,19 @@ public class Main {
         FancyPrint.setDelay("=========================================================================================", 10);
     }
 
-    public static void clearScreen() {  
+    public static void clearScreen() 
+    {  
         System.out.print("\033[H\033[2J");  
         System.out.flush();  
     }
 
-    public static void sleep(int n) {
-        try {
+    public static void sleep(int n) 
+    {
+        try 
+        {
             Thread.sleep(n);
-        } catch (InterruptedException e) {
+        } catch (InterruptedException e) 
+        {
             System.out.println("Sleep interrupted");
         }
     }
