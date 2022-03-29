@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
         //TODO: We are going to have to make a class to scan user inputs and check different things like if the user has inputted quit or not and what to do. 
+        //TODO: Make a Quit Expection, we will make it towards the end of the project
         //TODO: Make a method that prints out Credits to us xD
 
 public class Main {
