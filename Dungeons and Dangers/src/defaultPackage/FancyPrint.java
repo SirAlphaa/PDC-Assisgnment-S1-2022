@@ -38,7 +38,7 @@ public class FancyPrint
 
     public static void userInputArea() 
     {
-        System.out.print("\n -> ");
+        System.out.print(" -> ");
     }
 
     //This method takes in just a string and prints it like normal

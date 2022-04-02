@@ -8,8 +8,10 @@ public class CustomScan {
         int returnInt = 0;
         String input = "";
         Scanner sc = new Scanner(System.in);
+        FancyPrint.newLine();
         while (loopyBoi) {
             try {
+                FancyPrint.userInputArea();
                 input = sc.nextLine();
                 if (input.trim().equalsIgnoreCase("quit")) {
                     //TODO: add Quit method here
@@ -21,29 +23,57 @@ public class CustomScan {
 
             } catch (InputMismatchException e) {
                 FancyPrint.newLine();
-                FancyPrint.setDelay("Please input a number only", 30, true);
-                FancyPrint.userInputArea();
+                FancyPrint.setDelay("inputMismatchexception", 20, true);
             } catch (NumberFormatException e) {
                 FancyPrint.newLine();
-                FancyPrint.setDelay("Please input a number only", 30, true);
-                FancyPrint.userInputArea();
+                FancyPrint.setDelay("Please input a number only", 20, true);
             }
         }
-        loopyBoi = true;
         sc.close();
         return returnInt;
     }
 
     public static int scanIntBetween(int low, int high) {
-        int returnInt = 1234567890;
-        while (returnInt == 1234567890) {
-            returnInt = scanInt();
-            if ((returnInt <= low)||(returnInt >= high)) {
-                FancyPrint.setDelay("Please input a vaild number", 30);
-                returnInt = 1234567890;
+        boolean loopyBoi = true;
+        int returnInt = 0;
+        String input = "";
+        Scanner sc = new Scanner(System.in);
+        FancyPrint.newLine();
+        while (loopyBoi) {
+            try {
                 FancyPrint.userInputArea();
+                input = sc.nextLine();
+                if (input.trim().equalsIgnoreCase("quit")) {
+                    //TODO: add Quit method here
+                    System.out.print("Run Quit Method");
+                    System.exit(0);
+                }
+                returnInt = Integer.parseInt(input);
+                if ((returnInt >= low)&&(returnInt <= high)) {
+                    loopyBoi = false;
+                } else {
+                    FancyPrint.setDelay("Please input a vaild number", 30, true);
+                }
+
+            } catch (InputMismatchException e) {
+                FancyPrint.newLine();
+                FancyPrint.setDelay("inputMismatchexception", 20, true);
+            } catch (NumberFormatException e) {
+                FancyPrint.newLine();
+                FancyPrint.setDelay("Please input a number only", 20, true);
             }
         }
+        sc.close();
         return returnInt;
+
+        // int returnInt = 1234567890;
+        // while (returnInt == 1234567890) {
+        //     returnInt = scanInt();
+        //     if ((returnInt <= low)||(returnInt >= high)) {
+        //         FancyPrint.setDelay("Please input a vaild number", 30);
+        //         returnInt = 1234567890;
+        //     }
+        // }
+        // return returnInt;
     }
 }

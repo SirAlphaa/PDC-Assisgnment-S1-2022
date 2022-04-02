@@ -1,8 +1,13 @@
-
-
         //TODO: We are going to have to make a class to scan user inputs and check different things like if the user has inputted quit or not and what to do. 
         //TODO: Make a Quit Expection, we will make it towards the end of the project
         //TODO: Make a method that prints out Credits to us xD
+
+        //TODO FOR SALMAN
+        //Going to make the Credits, planning on using a notepad to store our names and any usefull websites, youll see
+        //Make Character Creation and selection classes
+
+        //TODO FOR NATHAN
+        // Cave man go ooga booga
 
 public class Main 
 {
@@ -14,10 +19,11 @@ public class Main
         boolean looper = true;
 
         //= Opening Title Screen to MainMenu ======================================================
-        //openingScren();
-        FancyPrint.userInputArea();
+        clearScreen();
+        openingScren();
+        uIntInput = CustomScan.scanIntBetween(1,3);
         
-        uIntInput = CustomScan.scanIntBetween(0,4);
+        //= Main Menu options =====================================================================
 
         //TODO: Below is for testing only
         clearScreen();
@@ -27,7 +33,6 @@ public class Main
 
     public static void openingScren() 
     {
-        clearScreen();
         System.out.print("Loading, please wait");
         FancyPrint.setDelay(".....", 700, true);
         FancyPrint.setDelay("Done!", 40);
