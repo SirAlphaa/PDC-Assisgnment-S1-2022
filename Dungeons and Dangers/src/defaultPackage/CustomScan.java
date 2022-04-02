@@ -6,10 +6,11 @@ public class CustomScan {
     public static int scanInt(){
         boolean loopyBoi = true;
         int returnInt = 0;
+        String input = "";
         Scanner sc = new Scanner(System.in);
         while (loopyBoi) {
             try {
-                String input = sc.nextLine();
+                input = sc.nextLine();
                 if (input.trim().equalsIgnoreCase("quit")) {
                     //TODO: add Quit method here
                     System.out.print("Run Quit Method");
