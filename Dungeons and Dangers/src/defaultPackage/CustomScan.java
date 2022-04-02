@@ -22,10 +22,8 @@ public class CustomScan {
                 loopyBoi = false;
 
             } catch (InputMismatchException e) {
-                FancyPrint.newLine();
                 FancyPrint.setDelay("inputMismatchexception", 20, true);
             } catch (NumberFormatException e) {
-                FancyPrint.newLine();
                 FancyPrint.setDelay("Please input a number only", 20, true);
             }
         }
@@ -56,10 +54,8 @@ public class CustomScan {
                 }
 
             } catch (InputMismatchException e) {
-                FancyPrint.newLine();
                 FancyPrint.setDelay("inputMismatchexception", 20, true);
             } catch (NumberFormatException e) {
-                FancyPrint.newLine();
                 FancyPrint.setDelay("Please input a number only", 20, true);
             }
         }
