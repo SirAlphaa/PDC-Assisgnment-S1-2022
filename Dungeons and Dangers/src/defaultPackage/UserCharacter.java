@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class Players 
+public class UserCharacter 
 {
    //TODO: Use buffer reader and printwriter to check if the user exits, or make a new one and save progress with hash map.
    
