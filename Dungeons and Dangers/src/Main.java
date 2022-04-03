@@ -1,4 +1,6 @@
-        //TODO: We are going to have to make a class to scan user inputs and check different things like if the user has inputted quit or not and what to do. 
+import java.util.Arrays;
+
+//TODO: We are going to have to make a class to scan user inputs and check different things like if the user has inputted quit or not and what to do. 
         //TODO: Make a Quit Expection, we will make it towards the end of the project
         //TODO: Make a method that prints out Credits to us xD
 
@@ -20,7 +22,7 @@ public class Main
 
         //= Opening Title Screen to MainMenu ======================================================
         clearScreen();
-        //openingScren();
+        openingScren();
         uIntInput = CustomScan.scanIntBetween(1,3);
         
         //= Main Menu options =====================================================================
@@ -28,7 +30,9 @@ public class Main
         switch (uIntInput) {
             case 3:
                 String[] Devs = FileInterface.readRecordsString("creditsInfo.txt", "Credits");
-                System.out.print(Devs);
+                String[] specialThanks = FileInterface.readRecordsString("creditsInfo.txt", "Special Thanks");
+                System.out.print(Arrays.toString(Devs));
+                System.out.print(Arrays.toString(specialThanks));
                 break;
         
             default:
@@ -36,7 +40,7 @@ public class Main
         }
 
         //TODO: Below is for testing only
-        //clearScreen();
+        clearScreen();
         System.out.print(uIntInput);
         System.exit(0);
     }
