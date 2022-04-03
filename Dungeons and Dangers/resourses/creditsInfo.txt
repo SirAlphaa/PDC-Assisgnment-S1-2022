@@ -1,0 +1,8 @@
+Credits 
+Salman Ali - Co Lead Developer
+Nathan Flanagan - Co Lead Developer
+
+Special Thanks
+Github.com - For Making it easier to work on a programming progect
+AUT - For teaching us how to make amazing programs 
+StackOverFlow.com - Being there for us when we needed help with our code

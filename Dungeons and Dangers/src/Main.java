@@ -20,13 +20,23 @@ public class Main
 
         //= Opening Title Screen to MainMenu ======================================================
         clearScreen();
-        openingScren();
+        //openingScren();
         uIntInput = CustomScan.scanIntBetween(1,3);
         
         //= Main Menu options =====================================================================
+        clearScreen();
+        switch (uIntInput) {
+            case 3:
+                String[] Devs = FileInterface.readRecordsString("creditsInfo.txt", "Credits");
+                System.out.print(Devs);
+                break;
+        
+            default:
+                System.out.println("x");;
+        }
 
         //TODO: Below is for testing only
-        clearScreen();
+        //clearScreen();
         System.out.print(uIntInput);
         System.exit(0);
     }
