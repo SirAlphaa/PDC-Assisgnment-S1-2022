@@ -19,22 +19,22 @@ public class UserCharacter
       FancyPrint.setDelay("010 is a Mage and 020 is a Knight", 10, true);
       FancyPrint.setDelay("001 is a Staff and 002 is a Sword", 10, true);
 
-      if (input.equals("111"))
+      if (input.equals(111))
       {
          FancyPrint.setDelay("You are a Male Mage, wielding a staff!", 10, true);
          attributes = 111;
       }
-      else if (input.equals("211"))
+      else if (input.equals(211))
       {
          FancyPrint.setDelay("You are a Female Mage, wielding a staff!", 10, true);
          attributes = 211;
       }
-      else if (input.equals("122"))
+      else if (input.equals(122))
       {
          FancyPrint.setDelay("You are a Male Knight, wielding a sword!", 10, true);
          attributes = 122;
       }
-      else if (input.equals("222"))
+      else if (input.equals(222))
       {
          FancyPrint.setDelay("You are a Female Knight, wielding a Sword!", 10, true);
          attributes = 222;
