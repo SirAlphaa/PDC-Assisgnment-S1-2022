@@ -1,4 +1,4 @@
-public class Cave 
+public class Dungeon 
 {
   public static void Scenario()
   {

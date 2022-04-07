@@ -22,7 +22,7 @@ public class Main
 
         //= Opening Title Screen to MainMenu ======================================================
         clearScreen();
-        openingScren();
+        openingScreen();
         uIntInput = CustomScan.scanIntBetween(1,3);
         
         //= Main Menu options =====================================================================
@@ -45,7 +45,7 @@ public class Main
         System.exit(0);
     }
 
-    public static void openingScren() 
+    public static void openingScreen() 
     {
         System.out.print("Loading, please wait");
         FancyPrint.setDelay(".....", 700, true);
@@ -53,7 +53,7 @@ public class Main
         sleep(500);
         clearScreen();
         FancyPrint.setDelay("==========================================================================================", 10, true);
-        FancyPrint.setDelay("*                                      Welcome to                                        *", 20, true);
+        FancyPrint.setDelay("*                                      Welcome to                                        *", 50, true);
         FancyPrint.setDelay("*                                Dungeons and Dangers!!!                                 *", 20, true);
         FancyPrint.setDelay("==========================================================================================", 10, true);
         FancyPrint.newLine();
