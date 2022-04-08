@@ -1,11 +1,21 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Map.Entry;
 
 public class UserCharacter
 {
    //TODO: Use buffer reader and printwriter to check if the user exits, or make a new one and save progress with hash map.
    //TODO: Replace scanners with CustomScanner class ones.
    static HashMap<String, Integer> Player = new HashMap<String, Integer>();
+   static BufferedWriter br;
 
    public static void createPlayer()
    {
@@ -49,6 +59,42 @@ public class UserCharacter
          Player.put(name, attributes);
       }
       //TODO: Add the 'Player' hashmap into a text file.
+      
+      //FIXME: Check if lines 63 to 97 are good?
+      //TODO: Not use map interface XD.
+      //TODO: Alternative is to use Task2_03 as a template for the Bufferreader and PrintWriter.
+      final  String outputFilePath = "./Dungeons and Dangers/resourses/UserCharacter.txt";
+      File file = new File(outputFilePath);
+        
+      BufferedWriter bf = null;
+      
+      try
+      {
+          //create new BufferedWriter for the output file
+          bf = new BufferedWriter( new FileWriter(file) );
+
+          //iterate map entries
+          for(Map.Entry<String, Integer> entry : Player.entrySet())
+          {
+              //put key and value separated by a space
+              bf.write(entry.getKey() + " " + entry.getValue());
+              
+              //new line
+              bf.newLine();
+          }
+          bf.flush();
+      } catch(IOException e)
+      {
+          e.printStackTrace();
+      }
+      finally
+      {
+         try
+         {
+            //always close the writer
+            bf.close();
+         }catch(Exception e){}
+      }
    }
 
    //Use FileReader to read the users Name and Attributes from a text file
