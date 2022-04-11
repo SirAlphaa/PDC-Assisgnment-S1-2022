@@ -23,7 +23,7 @@ public class CreateCharacter
     
     //Player = FileInterface.readRecordHashMap("UserCharacter.txt");
     BufferedWriter br;
-  
+    
     String inputName = CustomScan.scanString();
     name = inputName;
     
@@ -40,15 +40,15 @@ public class CreateCharacter
 
 
     //If statement depending on values chosen in scanner, e.g a male knight with a sword would be saved into the hashmap
-    boolean newName = true;
-    while (newName)
-    {
-      if (name.equals(null))
-      {
-        newName = true;
-        FancyPrint.setDelay("Input a name please.", 10, true);
-      }
-    }
+    // boolean newName = true;
+    // while (newName)
+    // {
+    //   if (name.equals(null))
+    //   {
+    //     newName = true;
+    //     FancyPrint.setDelay("Input a name please.", 10, true);
+    //   }
+    // }
     
     boolean newAttribute = true;
     while (newAttribute)

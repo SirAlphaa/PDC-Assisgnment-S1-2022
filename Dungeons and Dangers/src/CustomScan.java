@@ -75,6 +75,8 @@ public class CustomScan {
                     //TODO: add Quit method here
                     System.out.print("Run Quit Method");
                     System.exit(0);
+                } else if (input.trim().equalsIgnoreCase("")) {
+                    throw new NumberFormatException();
                 }
                 returnString = input;
                 loopyBoi = false;
