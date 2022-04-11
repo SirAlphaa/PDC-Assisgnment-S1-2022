@@ -33,8 +33,7 @@ public class CreateCharacter
       FancyPrint.setDelay("010 is a Mage and 020 is a Knight", 10, true);
       FancyPrint.setDelay("001 is a Staff and 002 is a Sword", 10, true);
       //Scanner used to input attributes as an integer value
-      Scanner scanAttribute = new Scanner(System.in);
-      Integer input = scanAttribute.nextInt();
+      Integer input = CustomScan.scanInt();
 
 
       //If statement depending on values chosen in scanner, e.g a male knight with a sword would be saved into the hashmap
@@ -68,6 +67,7 @@ public class CreateCharacter
       //FIXME: Check if lines 63 to 97 are good?
       //TODO: Not use map interface XD.
       //TODO: Alternative is to use Task2_03 as a template for the Bufferreader and PrintWriter.
+      //TODO: Fix yo character.txt file
       
       //Save the new values of the hashmap into a file (UserCharacter.txt)
       final  String outputFilePath = "./Dungeons and Dangers/resourses/UserCharacter.txt";
