@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Map.Entry;
 
-public class createCharacter
+public class CreateCharacter
 {
    //TODO: Use buffer reader and printwriter to check if the user exits, or make a new one and save progress with hash map.
    //TODO: Replace scanners with CustomScanner class ones.
@@ -20,12 +20,13 @@ public class createCharacter
       String name; 
       //attribute (value) for hashmap
       Integer attributes = 000;
-     
+   
       //Printing out basic text to introduce a new character creation
-      FancyPrint.setDelay("Whats your name, Adventurer?: ", 10, true);
-      //Scanner used to input name
-      Scanner scanName = new Scanner(System.in);
-      String inputName = scanName.nextLine();
+      FancyPrint.setDelay("Whats your name, Adventurer?: ", 20 , true);
+
+      String inputName = "";
+      inputName = CustomScan.scanString();
+      
       name = inputName;
       FancyPrint.setDelay("Input your character loadout in order of sex, class and weapon: ", 10, true);
       FancyPrint.setDelay("100 is Male and 200 is Female", 10, true);
@@ -71,27 +72,27 @@ public class createCharacter
       //Save the new values of the hashmap into a file (UserCharacter.txt)
       final  String outputFilePath = "./Dungeons and Dangers/resourses/UserCharacter.txt";
       File file = new File(outputFilePath);
-        
+
       BufferedWriter bf = null;
       
       try
       {
           //create new BufferedWriter for the output file
-          bf = new BufferedWriter( new FileWriter(file) );
+         bf = new BufferedWriter( new FileWriter(file) );
 
-          //iterate map entries
-          for(Map.Entry<String, Integer> entry : Player.entrySet())
-          {
+         //iterate map entries
+         for(Map.Entry<String, Integer> entry : Player.entrySet())
+         {
               //put key and value separated by a space
-              bf.write(entry.getKey() + " " + entry.getValue());
-              
+            bf.write(entry.getKey() + " " + entry.getValue());
+            
               //new line
-              bf.newLine();
-          }
-          bf.flush();
+            bf.newLine();
+         }
+         bf.flush();
       } catch(IOException e)
       {
-          e.printStackTrace();
+         e.printStackTrace();
       }
       finally
       {

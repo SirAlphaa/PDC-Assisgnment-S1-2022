@@ -22,12 +22,16 @@ public class Main
 
         //= Opening Title Screen to MainMenu ======================================================
         clearScreen();
-        openingScreen();
+        //openingScreen();
         uIntInput = CustomScan.scanIntBetween(1,3);
         
         //= Main Menu options =====================================================================
         clearScreen();
         switch (uIntInput) {
+            case 1:
+                CreateCharacter.createPlayer();
+                System.out.println("Done");
+                break;
             case 3:
                 String[] Devs = FileInterface.readRecordsString("creditsInfo.txt", "Credits");
                 String[] specialThanks = FileInterface.readRecordsString("creditsInfo.txt", "Special Thanks");
@@ -40,8 +44,8 @@ public class Main
         }
 
         //TODO: Below is for testing only
-        clearScreen();
-        System.out.print(uIntInput);
+        // clearScreen();
+        // System.out.print(uIntInput);
         System.exit(0);
     }
 

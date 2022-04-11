@@ -27,7 +27,6 @@ public class CustomScan {
                 FancyPrint.setDelay("Please input a number only", 20, true);
             }
         }
-        sc.close();
         return returnInt;
     }
 
@@ -59,17 +58,34 @@ public class CustomScan {
                 FancyPrint.setDelay("Please input a number only", 20, true);
             }
         }
-        sc.close();
         return returnInt;
+    }
 
-        // int returnInt = 1234567890;
-        // while (returnInt == 1234567890) {
-        //     returnInt = scanInt();
-        //     if ((returnInt <= low)||(returnInt >= high)) {
-        //         FancyPrint.setDelay("Please input a vaild number", 30);
-        //         returnInt = 1234567890;
-        //     }
-        // }
-        // return returnInt;
+    public static String scanString(){
+        boolean loopyBoi = true;
+        String returnString = "";
+        String input = "";
+        Scanner sc = new Scanner(System.in);
+        FancyPrint.newLine();
+        while (loopyBoi) {
+            try {
+                FancyPrint.userInputArea();
+                input = sc.nextLine();
+                if (input.trim().equalsIgnoreCase("quit")) {
+                    //TODO: add Quit method here
+                    System.out.print("Run Quit Method");
+                    System.exit(0);
+                }
+                returnString = input;
+                loopyBoi = false;
+
+            } catch (InputMismatchException e) {
+                FancyPrint.setDelay("inputMismatchexception", 20, true);
+            } catch (NumberFormatException e) {
+                FancyPrint.setDelay("Please input a string only", 20, true);
+            }
+        }
+        return returnString;
     }
 }
+
