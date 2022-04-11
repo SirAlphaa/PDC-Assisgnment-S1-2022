@@ -7,15 +7,13 @@ import java.util.HashMap;
 public class FileInterface 
 {
 
-    public static String[] readRecordsString(String fileName, String key)
-    {
+    public static String[] readRecordsString(String fileName, String key) {
         String[] returnMe = {};
         String line; 
         BufferedReader br;
         boolean loopyBoi = false;
         
-        try 
-        {
+        try {
             br = new BufferedReader(new FileReader("./Dungeons and Dangers/resourses/" + fileName));
             while ((line = br.readLine()) != null) 
             {
@@ -54,12 +52,12 @@ public class FileInterface
         return newarr;
     }
 
-    public static HashMap<String, Integer> readRecordHashMap(String fileName) 
+    public static HashMap<String, Integer> readRecordHashMap(HashMap<String, Integer> hashMap, String fileName) 
     {
         boolean loopyBoi = false;
         BufferedReader br;
         String line;
-        HashMap<String, Integer> input = new HashMap<String, Integer>();
+        // HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
 
         loopyBoi = true;
         try 
@@ -69,7 +67,7 @@ public class FileInterface
                 if ((line = br.readLine()) != null) 
                 {
                     String[] a = line.split(" ");
-                    input.put(a[0], Integer.parseInt(a[1]));
+                    hashMap.put(a[0], Integer.parseInt(a[1]));
                 } 
                 else if (((line = br.readLine()) == null) || (line = br.readLine()) == " ") 
                 {
@@ -83,6 +81,6 @@ public class FileInterface
         {
             System.out.println("IO Exception");
         }
-        return input;
+        return hashMap;
     }
 }

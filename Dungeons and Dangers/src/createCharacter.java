@@ -8,21 +8,24 @@ import java.util.Map;
 
 public class CreateCharacter
 {
-  //TODO: Use buffer reader and printwriter to check if the user exits, or make a new one and save progress with hash map.
-  //TODO: Replace scanners with CustomScanner class ones.
-  static HashMap<String, Integer> Player = new HashMap<>();
-  //Player = FileInterface.readRecordHashMap("UserCharacter.txt");
-  static BufferedWriter br;
-
   public static void createPlayer()
   {
-    //name (key) for hashmap
-    String name; 
-    //attribute (value) for hashmap
-    Integer attributes = 000;
-  
-    //Printing out basic text to introduce a new character creation
-    FancyPrint.setDelay("Whats your name, Adventurer?: ", 20 , true);
+      Player = FileInterface.readRecordHashMap(Player, "UserCharacter.txt");
+      //name (key) for hashmap
+      String name; 
+      //attribute (value) for hashmap
+      Integer attributes = 000;
+
+      //Printing out basic text to introduce a new character creation
+      FancyPrint.setDelay("Whats your name, Adventurer?: ", 20 , true);
+      //TODO: Use buffer reader and printwriter to check if the user exits, or make a new one and save progress with hash map.
+      //TODO: Replace scanners with CustomScanner class ones.
+      HashMap<String, Integer> Player = new HashMap<>();
+      //Player = FileInterface.readRecordHashMap("UserCharacter.txt");
+      BufferedWriter br;
+   
+      //Printing out basic text to introduce a new character creation
+      FancyPrint.setDelay("Whats your name, Adventurer?: ", 20 , true);
 
     String inputName = CustomScan.scanString();
     name = inputName;
