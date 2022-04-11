@@ -2,10 +2,11 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.Map;
 
-public class FileInterface 
-{
+public class FileInterface {
 
     public static String[] readRecordsString(String fileName, String key) {
         String[] returnMe = {};
@@ -52,8 +53,7 @@ public class FileInterface
         return newarr;
     }
 
-    public static HashMap<String, Integer> readRecordHashMap(HashMap<String, Integer> hashMap, String fileName) 
-    {
+    public static HashMap<String, Integer> readRecordHashMap(HashMap<String, Integer> hashMap, String fileName) {
         boolean loopyBoi = false;
         BufferedReader br;
         String line;
@@ -83,4 +83,37 @@ public class FileInterface
         }
         return hashMap;
     }
+
+    public static void writeRecordHasMap(HashMap<String, Integer> hashMap, String fileName){
+
+        PrintWriter output = null;
+        try {
+            output = new PrintWriter("./Dungeons and Dangers/resourses/" + fileName);
+            for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+                output.println(entry.getKey() + " " + entry.getValue());
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } finally {
+            if (output != null) {
+                output.close();
+            }
+        }
+    }
 }
+
+// public static void writeRecords(HashMap<String, Integer> records) {
+//     PrintWriter output = null;
+//     try {
+//         output = new PrintWriter("./resources/T02_scores.txt");
+//         for (Map.Entry<String, Integer> entry : records.entrySet()) {
+//             output.println(entry.getKey() + " " + entry.getValue());;
+//         }
+    // } catch (FileNotFoundException e) {
+    //     System.out.println("File not found");
+    // } finally {
+    //     if (output != null) {
+    //         output.close();
+    //     }
+//     }
+// }

@@ -90,52 +90,7 @@ public class CreateCharacter
     //TODO: Alternative is to use Task2_03 as a template for the Bufferreader and PrintWriter.
     //TODO: Fix yo character.txt file
     
-    //Save the new values of the hashmap into a file (UserCharacter.txt)
-    final  String outputFilePath = "./Dungeons and Dangers/resourses/UserCharacter.txt";
-    File file = new File(outputFilePath);
-
-    BufferedWriter bf = null;
-    
-    try
-    {
-      //create new BufferedWriter for the output file
-      bf = new BufferedWriter( new FileWriter(file) );
-
-      //iterate map entries
-      for(Map.Entry<String, Integer> entry : Player.entrySet())
-      {
-          //put key and value separated by a space
-        bf.write(entry.getKey() + " " + entry.getValue());
-        
-          //new line
-        bf.newLine();
-      }
-      bf.flush();
-    } 
-    catch(IOException e)
-    {
-      e.printStackTrace();
-    }
-    finally
-    {
-      try
-      {
-        //always close the writer
-        bf.close();
-      }
-      catch(Exception e)
-      {
-        System.out.print(e);
-      }
-    }
-  }
-  //TODO: Use FileReader to read the users Name and Attributes from a text file
-  //This method grabs an existing player made from the UserCharacter.txt file
-  public static void existingPlayer()
-  {  
-    FancyPrint.setDelay("Welcome back Adventurer!", 10, true);
-    FancyPrint.setDelay("", 10, true);
-
-    
+    //=== DONT TOUCH THE READER I SWEAR TO GOD ====================================================
+    FileInterface.writeRecordHasMap(Player, "UserCharacter.txt");
   }
 }
