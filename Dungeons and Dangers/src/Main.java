@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.HashMap;
 
 //TODO: We are going to have to make a class to scan user inputs and check different things like if the user has inputted quit or not and what to do. 
         //TODO: Make a Quit Expection, we will make it towards the end of the project
@@ -31,6 +32,11 @@ public class Main
             case 1:
                 CreateCharacter.createPlayer();
                 System.out.println("Done");
+                break;
+            case 2:
+                HashMap<String, Integer> test = new HashMap<String, Integer>();
+                test = FileInterface.readRecordHashMap("UserCharacter.txt");
+                System.out.println(test);
                 break;
             case 3:
                 String[] Devs = FileInterface.readRecordsString("creditsInfo.txt", "Credits");

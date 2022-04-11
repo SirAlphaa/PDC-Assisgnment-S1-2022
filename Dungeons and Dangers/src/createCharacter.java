@@ -4,8 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
-import java.util.Map.Entry;
+
 
 public class CreateCharacter
 {
@@ -33,6 +32,7 @@ public class CreateCharacter
       FancyPrint.setDelay("010 is a Mage and 020 is a Knight", 10, true);
       FancyPrint.setDelay("001 is a Staff and 002 is a Sword", 10, true);
       //Scanner used to input attributes as an integer value
+      //TODO: Fix yo if statement for this
       Integer input = CustomScan.scanInt();
 
 
@@ -108,7 +108,5 @@ public class CreateCharacter
    public static void existingPlayer()
    {
       FancyPrint.setDelay("Welcome back Adventurer!", 10, true);
-
-      
-   }
+      }
 }

@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.function.LongUnaryOperator;
+import java.util.HashMap;
 
 public class FileInterface {
 
@@ -13,7 +13,7 @@ public class FileInterface {
         boolean loopyBoi = false;
         
         try {
-            br = new BufferedReader(new FileReader("./Dungeons and Dangers/resourses/creditsInfo.txt"));
+            br = new BufferedReader(new FileReader("./Dungeons and Dangers/resourses/" + fileName));
             while ((line = br.readLine()) != null) {
                 if (loopyBoi) {
                     returnMe = addElement(returnMe, line);
@@ -39,4 +39,29 @@ public class FileInterface {
         return newarr;
     }
 
+    public static HashMap<String, Integer> readRecordHashMap(String fileName) {
+        boolean loopyBoi = false;
+        BufferedReader br;
+        String line;
+        HashMap<String, Integer> input = new HashMap<String, Integer>();
+
+        loopyBoi = true;
+        try {
+            br = new BufferedReader(new FileReader("./Dungeons and Dangers/resourses/" + fileName));
+            while (loopyBoi) {
+                if ((line = br.readLine()) != null) {
+                    String[] a = line.split(" ");
+                    input.put(a[0], Integer.parseInt(a[1]));
+                } else if (((line = br.readLine()) == null) || (line = br.readLine()) == " ") {
+                    loopyBoi = false;
+                }
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File Not Found");
+        } catch (IOException e) {
+            System.out.println("IO Exception");
+        }
+
+        return input;
+    }
 }
