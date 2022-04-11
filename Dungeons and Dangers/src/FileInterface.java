@@ -53,7 +53,8 @@ public class FileInterface {
         return newarr;
     }
 
-    public static HashMap<String, Integer> readRecordHashMap(HashMap<String, Integer> hashMap, String fileName) {
+    public static HashMap<String, Integer> readRecordHashMap(HashMap<String, Integer> hashMap, String fileName) 
+    {
         boolean loopyBoi = false;
         BufferedReader br;
         String line;
@@ -84,7 +85,8 @@ public class FileInterface {
         return hashMap;
     }
 
-    public static void writeRecordHasMap(HashMap<String, Integer> hashMap, String fileName){
+    public static void writeRecordHasMap(HashMap<String, Integer> hashMap, String fileName)
+    {
 
         PrintWriter output = null;
         try {
