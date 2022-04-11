@@ -35,7 +35,7 @@ public class Main
                 break;
             case 2:
                 HashMap<String, Integer> test = new HashMap<String, Integer>();
-                test = FileInterface.readRecordHashMap("UserCharacter.txt");
+                test = FileInterface.readRecordHashMap(test, "UserCharacter.txt");
                 System.out.println(test);
                 break;
             case 3:

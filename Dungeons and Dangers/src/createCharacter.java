@@ -10,12 +10,12 @@ public class CreateCharacter
 {
    //TODO: Use buffer reader and printwriter to check if the user exits, or make a new one and save progress with hash map.
    //TODO: Replace scanners with CustomScanner class ones.
-   static HashMap<String, Integer> Player = new HashMap<>();
-   //Player = FileInterface.readRecordHashMap("UserCharacter.txt");
+   static HashMap<String, Integer> Player = new HashMap<String, Integer>();
    static BufferedWriter br;
-
+   
    public static void createPlayer()
    {
+      Player = FileInterface.readRecordHashMap(Player, "UserCharacter.txt");
       //name (key) for hashmap
       String name; 
       //attribute (value) for hashmap
@@ -76,6 +76,8 @@ public class CreateCharacter
 
       BufferedWriter bf = null;
       
+      
+
       try
       {
           //create new BufferedWriter for the output file
