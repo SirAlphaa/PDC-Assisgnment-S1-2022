@@ -10,7 +10,8 @@ public class CreateCharacter
 {
    //TODO: Use buffer reader and printwriter to check if the user exits, or make a new one and save progress with hash map.
    //TODO: Replace scanners with CustomScanner class ones.
-   static HashMap<String, Integer> Player = new HashMap<String, Integer>();
+   static HashMap<String, Integer> player = new HashMap<>();
+   player = FileInterface.readRecordHashMap("UserCharacter.txt");
    static BufferedWriter br;
 
    public static void createPlayer()
@@ -41,26 +42,26 @@ public class CreateCharacter
       {
          FancyPrint.setDelay("You are a Male Mage, wielding a staff!", 10, true);
          attributes = 111;
-         Player.put(name, attributes);
+         player.put(name, attributes);
       }
       else if (input.equals(211))
       {
          FancyPrint.setDelay("You are a Female Mage, wielding a staff!", 10, true);
          attributes = 211;
-         Player.put(name, attributes);
+         player.put(name, attributes);
       }
       else if (input.equals(122))
       {
          FancyPrint.setDelay("You are a Male Knight, wielding a sword!", 10, true);
          attributes = 122;
-         Player.put(name, attributes);
+         player.put(name, attributes);
       }
       else if (input.equals(222))
       {
          FancyPrint.setDelay("You are a Female Knight, wielding a Sword!", 10, true);
          name = inputName;
          attributes = 222;
-         Player.put(name, attributes);
+         player.put(name, attributes);
       }
       //TODO: Add the 'Player' hashmap into a text file.
       
@@ -81,7 +82,7 @@ public class CreateCharacter
          bf = new BufferedWriter( new FileWriter(file) );
 
          //iterate map entries
-         for(Map.Entry<String, Integer> entry : Player.entrySet())
+         for(Map.Entry<String, Integer> entry : player.entrySet())
          {
               //put key and value separated by a space
             bf.write(entry.getKey() + " " + entry.getValue());
