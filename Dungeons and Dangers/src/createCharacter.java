@@ -10,23 +10,20 @@ public class CreateCharacter
 {
   public static void createPlayer()
   {
-      HashMap<String, Integer> Player = new HashMap<>();
-      Player = FileInterface.readRecordHashMap(Player, "UserCharacter.txt");
-      //name (key) for hashmap
-      String name; 
-      //attribute (value) for hashmap
-      Integer attributes = 000;
+    HashMap<String, Integer> Player = new HashMap<>();
+    Player = FileInterface.readRecordHashMap(Player, "UserCharacter.txt");
+    //name (key) for hashmap
+    String name; 
+    //attribute (value) for hashmap
+    Integer attributes = 000;
 
-      //Printing out basic text to introduce a new character creation
-      FancyPrint.setDelay("Whats your name, Adventurer?: ", 20 , true);
-      //TODO: Use buffer reader and printwriter to check if the user exits, or make a new one and save progress with hash map.
-      //TODO: Replace scanners with CustomScanner class ones.
-      //Player = FileInterface.readRecordHashMap("UserCharacter.txt");
-      BufferedWriter br;
-      
-      
-      
-
+    //Printing out basic text to introduce a new character creation
+    FancyPrint.setDelay("Whats your name, Adventurer?: ", 20 , true);
+    //TODO: Use buffer reader and printwriter to check if the user exits, or make a new one and save progress with hash map.
+    
+    //Player = FileInterface.readRecordHashMap("UserCharacter.txt");
+    BufferedWriter br;
+  
     String inputName = CustomScan.scanString();
     name = inputName;
     
@@ -46,38 +43,47 @@ public class CreateCharacter
     boolean newName = true;
     while (newName)
     {
+      if (name.equals(null))
+      {
+        newName = true;
+        FancyPrint.setDelay("Input a name please.", 10, true);
+      }
+    }
+    
+    boolean newAttribute = true;
+    while (newAttribute)
+    {
       if (input.equals(111))
       {
         FancyPrint.setDelay("You are a Male Mage, wielding a staff!", 10, true);
         attributes = 111;
         Player.put(name, attributes);
-        newName = false;
+        newAttribute = false;
       }
       else if (input.equals(211))
       {
         FancyPrint.setDelay("You are a Female Mage, wielding a staff!", 10, true);
         attributes = 211;
         Player.put(name, attributes);
-        newName = false;
+        newAttribute = false;
       }
       else if (input.equals(122))
       {
         FancyPrint.setDelay("You are a Male Knight, wielding a sword!", 10, true);
         attributes = 122;
         Player.put(name, attributes);
-        newName = false;
+        newAttribute = false;
       }
       else if (input.equals(222))
       {
         FancyPrint.setDelay("You are a Female Knight, wielding a Sword!", 10, true);
-        name = inputName;
         attributes = 222;
         Player.put(name, attributes);
-        newName = false;
+        newAttribute = false;
       }
-      else if (input.equals(112) || input.equals(212))
+      else if (input.equals(112) || input.equals(212) || input.equals(null))
       {
-        newName = true;
+        newAttribute = true;
         FancyPrint.setDelay("Wrong class and item combination! Try again please.", 10, true);
       }
     }
