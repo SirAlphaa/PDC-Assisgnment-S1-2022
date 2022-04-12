@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.HashMap;
-
+        //FIXME: do we need the above hashmap import?
         //TODO: We are going to have to make a class to scan user inputs and check different things like if the user has inputted quit or not and what to do. 
         //TODO: Make a Quit Expection, we will make it towards the end of the project
         //TODO: Make a method that prints out Credits to us xD
@@ -10,7 +10,7 @@ import java.util.HashMap;
         //Make Character Creation and selection classes
 
         //TODO FOR NATHAN
-        // Cave man go ooga booga
+        // Dungeon go ooga booga
 
 public class Main 
 {

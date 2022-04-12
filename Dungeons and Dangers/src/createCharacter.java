@@ -49,7 +49,7 @@ public class CreateCharacter
     //     FancyPrint.setDelay("Input a name please.", 10, true);
     //   }
     // }
-    
+    //TODO: Perhaps add the ability for a mage to have a sword and knight to have a staff but they have drawbacks obviously.
     boolean newAttribute = true;
     while (newAttribute)
     {
@@ -87,13 +87,7 @@ public class CreateCharacter
         FancyPrint.setDelay("Wrong class and item combination! Try again please.", 10, true);
       }
     }
-    
-    
     //TODO: Add the 'Player' hashmap into a text file.
-    
-    //FIXME: Check if lines 63 to 97 are good?
-    //TODO: Not use map interface XD.
-    //TODO: Alternative is to use Task2_03 as a template for the Bufferreader and PrintWriter.
     //TODO: Fix yo character.txt file
     
     //=== DONT TOUCH THE READER I SWEAR TO GOD ====================================================
