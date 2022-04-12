@@ -27,3 +27,33 @@ Hashmap for characters set up
 Key         value
 Name        Attributes
 “Salman”    “Male,Mage,Staff”
+
+
+sudo code for battles?
+Character 
+	String name, role, weapon, 	
+
+	- int Attack()
+		"type of attack" malee or majic
+
+			if weapon is sword 
+		 		damage = 10
+			if weapon is staff
+				damage = 5
+		magic
+			if knight with sword
+				damage = 0 - 2
+			if mage with staff
+				damage = 8 - 12 
+				say: FOR DEMACIA!!!
+
+
+		return damage; 
+
+battle
+
+	- int 1v1 (usercharc, enemy)
+		while both > 0 hp
+			enemy.hp = usercharac.attack()
+			if enem.hp = 0 
+			userchar = enemy.attack()
