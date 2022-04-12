@@ -3,7 +3,7 @@ import java.util.HashMap;
 
 public class CreateCharacter
 {
-  public static void createPlayer()
+  public static UserCharacter createPlayer(UserCharacter userCharacter)
   {
     HashMap<String, Integer> Player = new HashMap<>();
     Player = FileInterface.readRecordHashMap(Player, "UserCharacter.txt");
@@ -83,5 +83,10 @@ public class CreateCharacter
     
     //=== DONT TOUCH THE READER I SWEAR TO GOD ====================================================
     FileInterface.writeRecordHasMap(Player, "UserCharacter.txt");
+    FancyPrint.setDelay("Selected and Saved :)", 20, true);
+    Main.sleep(2000);
+
+    userCharacter.setCharacter(name, attributes);
+    return userCharacter;
   }
 }
