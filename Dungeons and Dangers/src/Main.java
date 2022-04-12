@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.HashMap;
-        //FIXME: do we need the above hashmap import?
         //TODO: We are going to have to make a class to scan user inputs and check different things like if the user has inputted quit or not and what to do. 
         //TODO: Make a Quit Expection, we will make it towards the end of the project
         //TODO: Make a method that prints out Credits to us xD
@@ -23,9 +20,9 @@ public class Main
 
         //= Opening Title Screen to MainMenu ======================================================
         clearScreen();
-        //openingScreen();
+        openingScreen();
         uIntInput = CustomScan.scanIntBetween(1,3);
-        
+
         //= Main Menu options =====================================================================
         clearScreen();
         switch (uIntInput) {
@@ -37,12 +34,15 @@ public class Main
                 System.out.println("Coming soon");
                 break;
             case 3:
+                clearScreen();
                 String[] Devs = FileInterface.readRecordsString("creditsInfo.txt", "Credits");
                 String[] specialThanks = FileInterface.readRecordsString("creditsInfo.txt", "Special Thanks");
-                System.out.print(Arrays.toString(Devs));
-                System.out.print(Arrays.toString(specialThanks));
+                displayCredits(Devs, "Developers");
+                displayCredits(specialThanks, "Special Thanks");
+                // System.out.print(Arrays.toString(Devs));
+                // System.out.print(Arrays.toString(specialThanks));
                 break;
-        
+
             default:
                 System.out.println("x");;
         }
@@ -90,5 +90,13 @@ public class Main
         {
             System.out.println("Sleep interrupted");
         }
+    }
+
+    public static void displayCredits(String[] array, String name) {
+        FancyPrint.setDelay(name, 30, true);
+        for (int i = 0; i < array.length; i++) {
+            FancyPrint.setDelay(array[i], 30, true);
+        }
+        FancyPrint.newLine();
     }
 }
