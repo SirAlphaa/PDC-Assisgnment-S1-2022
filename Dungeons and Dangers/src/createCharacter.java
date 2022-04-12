@@ -8,7 +8,7 @@ public class CreateCharacter
     HashMap<String, Integer> Player = new HashMap<>();
     Player = FileInterface.readRecordHashMap(Player, "UserCharacter.txt");
     //name (key) for hashmap
-    String name; 
+    String name = ""; 
     //attribute (value) for hashmap
     Integer attributes = 000;
 
@@ -18,6 +18,7 @@ public class CreateCharacter
     String inputName = CustomScan.scanString();
     name = inputName;
     
+    //FIXME: Fix the english for this.
     FancyPrint.setDelay("Input your character loadout in order of sex, class and weapon: ", 10, true);
     FancyPrint.setDelay("<100> is Male and <200> is Female", 10, true);
     FancyPrint.setDelay("<010> is a Mage and <020> is a Knight", 10, true);
