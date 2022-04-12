@@ -1,9 +1,11 @@
 import java.util.Random;
 
 public class RandomGenerator {
-  public static void userDamageChance() {
-    Random userDamageChance = new Random();
-    int damageChance = userDamageChance.nextInt();
+  public static int userDamageChance(int damage) {
+    Random userDamageChance = new Random(10);
+    int damageChance = userDamageChance.nextInt(10) + 1;
+    damage = damageChance;
+    return damage;
   }
 
   public static void userDefendChance() {

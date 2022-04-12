@@ -1,5 +1,8 @@
 public abstract class Character {
-   String name, weapon, gender, role;
+   String name;
+   static String weapon;
+   String gender;
+   String role;
    int heathPoints;
    
    private static int damage;
@@ -36,17 +39,17 @@ public abstract class Character {
       FancyPrint.setDelay("For Magic input (2) ", 20, true);
       int choice = CustomScan.scanInt();
 
-      //I have a headache so Ill fix this another time properly
+      //FIXME: I have a headache so Ill fix this another time properly
       switch (choice) {
          case 1:
-            if (weapon.equals(002)) {
+            if (weapon.equals("002")) {
                //If weapon is a Sword
                damage = 10;
             }
             break;
             
          case 2:
-            if (weapon.equals(001)) {
+            if (weapon.equals("001")) {
                //If weapon is a Staff
                damage = 5;
             }
