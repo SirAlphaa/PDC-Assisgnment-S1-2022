@@ -1,9 +1,4 @@
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 
 
 public class CreateCharacter
@@ -20,10 +15,6 @@ public class CreateCharacter
     //Printing out basic text to introduce a new character creation
     FancyPrint.setDelay("Whats your name, Adventurer?: ", 20 , true);
     //TODO: Use buffer reader and printwriter to check if the user exits, or make a new one and save progress with hash map.
-    
-    //Player = FileInterface.readRecordHashMap("UserCharacter.txt");
-    BufferedWriter br;
-    
     String inputName = CustomScan.scanString();
     name = inputName;
     
