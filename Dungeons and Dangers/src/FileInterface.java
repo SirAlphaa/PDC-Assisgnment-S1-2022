@@ -10,83 +10,67 @@ public class FileInterface {
 
     public static String[] readRecordsString(String fileName, String key) {
         String[] returnMe = {};
-        String line; 
+        String line;
         BufferedReader br;
         boolean loopyBoi = false;
-        
+
         try {
             br = new BufferedReader(new FileReader("./Dungeons and Dangers/resourses/" + fileName));
-            while ((line = br.readLine()) != null) 
-            {
-                if (loopyBoi) 
-                {
+            while ((line = br.readLine()) != null) {
+                if (loopyBoi) {
                     returnMe = addElement(returnMe, line);
                 }
-                if (line.equalsIgnoreCase(key)) 
-                { 
-                    loopyBoi = true; 
+                if (line.equalsIgnoreCase(key)) {
+                    loopyBoi = true;
                 }
-                if (line.equalsIgnoreCase("")) 
-                { 
+                if (line.equalsIgnoreCase("")) {
                     loopyBoi = false;
                 }
             }
-        } catch (FileNotFoundException e) 
-        {
+        } catch (FileNotFoundException e) {
             System.out.println("File Not Found");
-        } catch (IOException e) 
-        {
+        } catch (IOException e) {
             System.out.println("IO Exception");
         }
-        
+
         return returnMe;
     }
 
-    public static String[] addElement(String inputArr[], String inputStr) 
-    {
+    public static String[] addElement(String inputArr[], String inputStr) {
         String newarr[] = new String[(inputArr.length) + 1];
-        for (int i = 0; i < newarr.length - 1; i++) 
-        {
+        for (int i = 0; i < newarr.length - 1; i++) {
             newarr[i] = inputArr[i];
         }
         newarr[inputArr.length] = inputStr;
         return newarr;
     }
 
-    public static HashMap<String, Integer> readRecordHashMap(HashMap<String, Integer> hashMap, String fileName) 
-    {
+    public static HashMap<String, Integer> readRecordHashMap(HashMap<String, Integer> hashMap, String fileName) {
         boolean loopyBoi = false;
         BufferedReader br;
         String line;
         // HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
 
         loopyBoi = true;
-        try 
-        {
+        try {
             br = new BufferedReader(new FileReader("./Dungeons and Dangers/resourses/" + fileName));
             while (loopyBoi) {
-                if ((line = br.readLine()) != null) 
-                {
+                if ((line = br.readLine()) != null) {
                     String[] a = line.split(" ");
                     hashMap.put(a[0], Integer.parseInt(a[1]));
-                } 
-                else if (((line = br.readLine()) == null) || (line = br.readLine()) == " ") 
-                {
+                } else if (((line = br.readLine()) == null) || (line = br.readLine()) == " ") {
                     loopyBoi = false;
                 }
             }
-        } catch (FileNotFoundException e) 
-        {
+        } catch (FileNotFoundException e) {
             System.out.println("File Not Found");
-        } catch (IOException e) 
-        {
+        } catch (IOException e) {
             System.out.println("IO Exception");
         }
         return hashMap;
     }
 
-    public static void writeRecordHasMap(HashMap<String, Integer> hashMap, String fileName)
-    {
+    public static void writeRecordHasMap(HashMap<String, Integer> hashMap, String fileName) {
 
         PrintWriter output = null;
         try {
