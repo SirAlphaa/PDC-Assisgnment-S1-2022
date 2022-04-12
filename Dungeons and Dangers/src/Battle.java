@@ -1,4 +1,3 @@
-public class Battle 
-{
-  
+public class Battle {
+
 }

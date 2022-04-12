@@ -48,6 +48,10 @@
                         System.out.println("x");
                         ;
                 }
+                clearScreen();
+                //=================================================================================
+
+                
 
                 // TODO: Below is for testing only
                 // clearScreen();
