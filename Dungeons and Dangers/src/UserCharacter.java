@@ -68,6 +68,8 @@ public class UserCharacter {
         System.out.println(heathPoints);
 
     }
+
+    
 }
 
 //Integer.parseInt(String.valueOf(arr))
