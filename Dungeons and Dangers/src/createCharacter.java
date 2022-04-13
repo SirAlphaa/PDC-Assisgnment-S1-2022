@@ -6,7 +6,7 @@ public class CreateCharacter
   public static UserCharacter createPlayer(UserCharacter userCharacter)
   {
     HashMap<String, Integer> Player = new HashMap<>();
-    Player = FileInterface.readRecordHashMap(Player, "UserCharacter.txt");
+    Player = FileInterface.readRecordHashMap(Player, "userCharacter.txt");
     //name (key) for hashmap
     String name = ""; 
     //attribute (value) for hashmap
@@ -83,7 +83,7 @@ public class CreateCharacter
     //TODO: Fix yo character.txt file
     
     //=== DONT TOUCH THE READER I SWEAR TO GOD ====================================================
-    FileInterface.writeRecordHasMap(Player, "UserCharacter.txt");
+    FileInterface.writeRecordHasMap(Player, "userCharacter.txt");
     FancyPrint.setDelay("Selected and Saved :)", 20, true);
     Main.sleep(2000);
 

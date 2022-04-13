@@ -23,12 +23,13 @@ Classes
 - UserCharacter (Master)
 - Enemies (Master)
 
+===================================================================================================
 Hashmap for characters set up 
 Key         value
 Name        Attributes
-“Salman”    “Male,Mage,Staff”
+"Salman"	"122" => “Male,Mage,Staff” 
 
-
+===================================================================================================
 sudo code for battles?
 Character 
 	String name, role, weapon, 	
@@ -57,3 +58,9 @@ battle
 			enemy.hp = usercharac.attack()
 			if enem.hp = 0 
 			userchar = enemy.attack()
+
+===================================================================================================
+Attributes
+1st digit 	= Gender 		{Male , Female}
+2nd digit 	= Role 			{Mage, knight, Assassin, Soldier}
+3rd digit	= Weapon 		{Staff, Sword, Dagger, Gun} 

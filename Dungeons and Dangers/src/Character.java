@@ -3,10 +3,28 @@ public abstract class Character {
    String name, weapon, gender, role;
    int healthPoints, attributes; 
 
+   /**
+    * 
+    * @param n Input the name of the charcter.
+    * @param attributes only 3 digits are to be entered (EG, 111, 122, 233...) Attributes
+      1st digit 	= Gender 		{Male , Female}
+      2nd digit 	= Role 			{Mage, knight, Assassin, Soldier}
+      3rd digit	= Weapon 		{Staff, Sword, Dagger, Gun} 
+    */
    public abstract void setCharacter(String n, Integer attributes);
 
+   /**
+    * @return the total damage dealt by the character 
+    */
    public abstract int attack();
 
+   /**
+    * This class converts and assigns the attributes to the corrsonding variables. 
+    * @param attributesonly 3 digits are to be entered (EG, 111, 122, 233...) Attributes
+      1st digit 	= Gender 		{Male , Female}
+      2nd digit 	= Role 			{Mage, knight, Assassin, Soldier}
+      3rd digit	= Weapon 		{Staff, Sword, Dagger, Gun} 
+    */
    public void assignAttributes(int attributes) {
       String strAttribute = Integer.toString(attributes);
       char[] attributeArray = new char[strAttribute.length()];
@@ -28,6 +46,11 @@ public abstract class Character {
          case 2:
             role = "Knight";
             break;
+         case 3:
+            role = "Assassin";
+            break;
+         case 4:
+            role = "Soldier";
       }
       switch (Integer.parseInt(String.valueOf(attributeArray[2]))) {
          case 1:
@@ -36,9 +59,20 @@ public abstract class Character {
          case 2:
             weapon = "Sword";
             break;
+         case 3:
+            weapon = "Dagger";
+            break;
+         case 4:
+            weapon = "Gun";
+            break;
       }
    }
 
+   /**
+    * Calculates the HP for the Character
+    * @param gender 
+    * @param role
+    */
    public void calculateHP(String gender, String role) {
       int tempHP = 0;
       switch (gender) {

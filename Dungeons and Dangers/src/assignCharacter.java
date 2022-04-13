@@ -5,7 +5,7 @@ public class assignCharacter {
     public static UserCharacter select(UserCharacter userCharacter) {
 
         HashMap<String, Integer> characters = new HashMap<>();
-        characters = FileInterface.readRecordHashMap(characters, "UserCharacter.txt");
+        characters = FileInterface.readRecordHashMap(characters, "userCharacter.txt");
         String uInput = "";
 
         Main.clearScreen();

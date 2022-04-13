@@ -1,6 +1,7 @@
 
 public class UserCharacter extends Character{
 
+    @Override
     public void setCharacter(String n, Integer attributes) {
 
         name = n;
