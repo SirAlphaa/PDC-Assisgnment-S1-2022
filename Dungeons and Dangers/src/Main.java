@@ -51,8 +51,6 @@
                 clearScreen();
                 //=================================================================================
 
-                
-
                 // TODO: Below is for testing only
                 // clearScreen();
                 // System.out.print(uIntInput);
