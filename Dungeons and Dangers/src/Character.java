@@ -18,6 +18,8 @@ public abstract class Character {
     */
    public abstract int attack();
 
+   public void damage() {};
+
    /**
     * This class converts and assigns the attributes to the corrsonding variables. 
     * @param attributesonly 3 digits are to be entered (EG, 111, 122, 233...) Attributes
