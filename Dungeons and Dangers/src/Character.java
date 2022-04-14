@@ -8,7 +8,7 @@ public abstract class Character {
     * @param n Input the name of the charcter.
     * @param attributes only 3 digits are to be entered (EG, 111, 122, 233...) Attributes
       1st digit 	= Gender 		{Male , Female}
-      2nd digit 	= Role 			{Mage, knight, Assassin, Soldier}
+      2nd digit 	= Role 			{Mage, Knight, Assassin, Soldier}
       3rd digit	= Weapon 		{Staff, Sword, Dagger, Gun} 
     */
    public abstract void setCharacter(String n, Integer attributes);
@@ -18,7 +18,32 @@ public abstract class Character {
     */
    public abstract int attack();
 
-   public void damage() {};
+   /**
+    * This class calculates the total amount of damage taken by the oppenant.
+    * @param damageTaken input the amount of damage taken
+    */
+   public void damage(int damageTaken) {
+
+      int totalDamagetaken = 0; 
+
+      switch (role) {
+         case "Mage":
+            totalDamagetaken = damageTaken + 2;
+            break;
+         case "Knight":
+            totalDamagetaken = damageTaken - 3;
+            break;
+         case "Assassin":
+            totalDamagetaken = damageTaken + 3;
+            break;
+         case "Soldier":
+            totalDamagetaken = damageTaken;
+            break;
+
+         }
+         FancyPrint.setDelay(name + " takes " + totalDamagetaken, 20, true);
+
+   };
 
    /**
     * This class converts and assigns the attributes to the corrsonding variables. 
@@ -94,6 +119,14 @@ public abstract class Character {
             break;
       }
       healthPoints = tempHP;
+   }
+
+   public void printStats() {
+      System.out.println(name);
+      System.out.println(gender);
+      System.out.println(role);
+      System.out.println(weapon);
+      System.out.println(healthPoints);
    }
 
    public int getHP() {
