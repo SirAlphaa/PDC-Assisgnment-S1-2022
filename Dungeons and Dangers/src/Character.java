@@ -41,8 +41,8 @@ public abstract class Character {
             break;
 
          }
-         FancyPrint.setDelay(name + " takes " + totalDamagetaken, 20, true);
-
+      FancyPrint.setDelay(name + " takes " + totalDamagetaken, 20, true);
+      healthPoints = healthPoints - totalDamagetaken;
    };
 
    /**

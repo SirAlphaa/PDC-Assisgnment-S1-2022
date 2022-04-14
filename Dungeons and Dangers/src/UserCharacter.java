@@ -16,9 +16,9 @@ public class UserCharacter extends Character{
     public int attack() {
         int uInput, damage = 0;
         String attackChoice = "";
-        FancyPrint.setDelay("Pick one of your available attacks", 20, true);
+        FancyPrint.setDelay("Pick one of your available "+role+" attacks", 20, true);
 
-        switch (role) {
+        switch (weapon) {
 
             case "Staff":
                 FancyPrint.setDelay("1) FireBall", 20, true);

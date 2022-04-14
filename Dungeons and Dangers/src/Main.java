@@ -17,7 +17,6 @@ public class Main {
         String uStringInput = "";
         boolean looper = true;
 
-
         // = Opening Title Screen to MainMenu
         // ======================================================
         clearScreen();
@@ -118,3 +117,11 @@ public class Main {
         FancyPrint.newLine();
     }
 }
+
+// int test;
+// userCharacter.setCharacter("Testman", 213);
+// for (int i = 0; i < 10; i++) {
+//     test = userCharacter.attack();
+//     System.out.print(" " + test + " ");
+// }
+
