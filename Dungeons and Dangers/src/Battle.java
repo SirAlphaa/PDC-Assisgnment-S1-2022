@@ -38,7 +38,7 @@ public class Battle {
                 damageMod = 1.0;
                 break;
             case 3:
-                damageMod = 1.7;
+                damageMod = 1.5;
                 break;
             default:
                 System.out.println("Error with Battle start switch");
@@ -67,6 +67,7 @@ public class Battle {
             }
         }
 
+        Main.sleep(3000);
 
         if (player.isAlive()) {
             FancyPrint.clearScreen();

@@ -22,13 +22,10 @@ public class Dungeon
     FancyPrint.setDelay(" (1) for left", 10, true);
     FancyPrint.setDelay(" (2) for right", 10, true);
    
-    String input = CustomScan.scanString();
-    if (input == "1") 
-    {
+    int input = CustomScan.scanIntBetween(1,2);
+    if (input == 1) {
       Dungeon.leftPath(user);
-    }
-    else if (input == "2")
-    {
+    } else if (input == 2) {
       Dungeon.rightPath(user);
     }
     FancyPrint.setDelay("You carry on into the Dungeon, further into its depths.", 10, true);
@@ -36,7 +33,10 @@ public class Dungeon
     Main.clearScreen();
 
     FancyPrint.setDelay("Up in the distance is a radiating glow, it calls to you and you tremble at its glory. The Boss of the dungeon emerges, the danger increases!", 10, true);
-    Battle.start(user, 3);
+    Main.sleep(3000);
+    Enemy baron = new Enemy();
+    baron.setCharacter("The Baron Nashor", 121);
+    Battle.start(user, baron, 3);
     FancyPrint.setDelay("YOU HAVE CONQUERED DUNGEONS AND DRAGONS, WINDHELM IS SAVED!", 100, true);
   }
 
@@ -44,8 +44,8 @@ public class Dungeon
   {
     FancyPrint.setDelay("You enter into a large echoing room and see someone, its the first enemy!", 10, true);
     FancyPrint.setDelay("He looks really relaxed.", 10, true);
+    Main.sleep(3000);
     //Queue battle class to start battle.
-    
     Battle.start(user, 1);
   }
 
@@ -53,6 +53,7 @@ public class Dungeon
   {
     FancyPrint.setDelay("You walk for what seems for days but you dont feel exhausted nor are hungry or thirsty.", 10, true);
     FancyPrint.setDelay("You end up at a huge arena, an enemy emerges from the shadows!", 10, true);
+    Main.sleep(3000);
     Battle.start(user, 2);
   }
 }

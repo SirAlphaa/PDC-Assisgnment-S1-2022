@@ -107,7 +107,7 @@ public class Enemy extends Character{
         break;
     }
 
-    FancyPrint.setDelay(name + " attacked with " + attackName, 5, true);
+    FancyPrint.setDelay(name + " attacked with " + attackName, 20, true);
     return damage;
   }
 

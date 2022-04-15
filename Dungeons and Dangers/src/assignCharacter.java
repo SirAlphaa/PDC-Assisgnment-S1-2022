@@ -2,10 +2,15 @@ import java.util.HashMap;
 
 public class assignCharacter {
     
+    /**
+     * Reads the hash map, waits for user to input character name, checks if it exists than applies the character to the object
+     * @param userCharacter The object that the usercharacter will be written into
+     * @return the user character.
+     */
     public static UserCharacter select(UserCharacter userCharacter) {
 
         HashMap<String, Integer> characters = new HashMap<>();
-        characters = FileInterface.readRecordHashMap(characters, "userCharacter.txt");
+        characters = FileInterface.readRecordHashMap(characters, "UserCharacter.txt");
         String uInput = "";
 
         Main.clearScreen();

@@ -8,6 +8,12 @@ import java.util.Map;
 
 public class FileInterface {
 
+    /**
+     * Reads a text file
+     * @param fileName input the file name EG filename.txt
+     * @param key the line of the text file the method will start reading from
+     * @return a string array
+     */
     public static String[] readRecordsString(String fileName, String key) {
         String[] returnMe = {};
         String line;
@@ -36,6 +42,12 @@ public class FileInterface {
         return returnMe;
     }
 
+    /**
+     * Adds an element to a string array
+     * @param inputArr The array that will get a new element
+     * @param inputStr the element to be inputted
+     * @return the string array
+     */
     public static String[] addElement(String inputArr[], String inputStr) {
         String newarr[] = new String[(inputArr.length) + 1];
         for (int i = 0; i < newarr.length - 1; i++) {
@@ -45,6 +57,12 @@ public class FileInterface {
         return newarr;
     }
 
+    /**
+     * Reads a text file
+     * @param hashMap input the hashmap that will be used
+     * @param fileName the file that will be read EG filename.txt
+     * @return the filled hashmap
+     */
     public static HashMap<String, Integer> readRecordHashMap(HashMap<String, Integer> hashMap, String fileName) {
         boolean loopyBoi = false;
         BufferedReader br;
@@ -70,6 +88,11 @@ public class FileInterface {
         return hashMap;
     }
 
+    /**
+     * Write a hashmap to a file
+     * @param hashMap the hashmap that will be written into a file
+     * @param fileName the file name EG Filename.txt
+     */
     public static void writeRecordHasMap(HashMap<String, Integer> hashMap, String fileName) {
 
         PrintWriter output = null;
@@ -88,6 +111,7 @@ public class FileInterface {
     }
 }
 
+//=== This is for testing purposes only ===========================================================
 // public static void writeRecords(HashMap<String, Integer> records) {
 //     PrintWriter output = null;
 //     try {

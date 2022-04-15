@@ -137,6 +137,9 @@ public abstract class Character {
       healthPoints = tempHP;
    }
 
+   /**
+    * Prints the stats of the character.
+    */
    public void printStats() {
       FancyPrint.setDelay("Current Stats for " + name + ":", 20, true);
       FancyPrint.setDelay("Gender and Role   | " + gender +" "+ role , 20, true);

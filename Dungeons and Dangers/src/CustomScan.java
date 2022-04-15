@@ -3,6 +3,10 @@ import java.util.Scanner;
 
 public class CustomScan {
 
+    /**
+     * Scans the console for a Int
+     * @return the user inputted int
+     */
     public static int scanInt(){
         boolean loopyBoi = true;
         int returnInt = 0;
@@ -30,6 +34,12 @@ public class CustomScan {
         return returnInt;
     }
 
+    /**
+     * Scans the console for a Int
+     * @param low The lowest value that is allowed
+     * @param high The highest value that is allowed
+     * @return the user inputted int
+     */
     public static int scanIntBetween(int low, int high) {
         boolean loopyBoi = true;
         int returnInt = 0;
@@ -61,6 +71,10 @@ public class CustomScan {
         return returnInt;
     }
 
+    /**
+     * Scans the console for the user Inputted string
+     * @return returns the user inputted string
+     */
     public static String scanString(){
         boolean loopyBoi = true;
         String returnString = "";
@@ -90,6 +104,9 @@ public class CustomScan {
         return returnString;
     }
 
+    /**
+     * Prompts the user to press enter to continue 
+     */
     public static void enterToContinue(){
         FancyPrint.setDelay("Press Enter to Continue", 20);
         Scanner sc = new Scanner(System.in);

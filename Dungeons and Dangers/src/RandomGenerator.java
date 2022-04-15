@@ -2,6 +2,12 @@ import java.util.Random;
 
 public class RandomGenerator {
 
+  /**
+   * Generates a random number
+   * @param min the minimum possable number
+   * @param max the maximum possable number
+   * @return
+   */
   public static int randomNumber (int min, int max) {
     int output = 0;
     Random rand = new Random();
@@ -17,22 +23,12 @@ public class RandomGenerator {
     return output;
 }
 
-  public static int userDamageChance(int damage) {
-    Random userDamageChance = new Random(10);
-    int damageChance = userDamageChance.nextInt(10) + 1;
-    damage = damageChance;
-    return damage;
-  }
-
-  public static void userDefendChance() {
-
-  }
-
-  public static void enemyDamageChance() {
-
-  }
-
-  public static void enemyDefendChance() {
-
-  }
 }
+
+//=== This is for testing purposes only ===========================================================
+  // public static int userDamageChance(int damage) {
+  //   Random userDamageChance = new Random(10);
+  //   int damageChance = userDamageChance.nextInt(10) + 1;
+  //   damage = damageChance;
+  //   return damage;
+  // }
