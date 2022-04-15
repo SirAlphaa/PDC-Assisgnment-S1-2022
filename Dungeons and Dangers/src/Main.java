@@ -16,12 +16,19 @@ public class Main {
         int uIntInput = 0;
         String uStringInput = "";
         boolean looper = true;
-
+        
+        // Enemy enemy = new Enemy();
+        // userCharacter.setCharacter("Testman", 213);
+        // Battle.start(userCharacter, 1);
+        
         // = Opening Title Screen to MainMenu
         // ======================================================
         clearScreen();
         openingScreen();
         uIntInput = CustomScan.scanIntBetween(1, 3);
+
+
+
 
         // = Main Menu options
         // =====================================================================
@@ -30,6 +37,7 @@ public class Main {
             case 1:
                 userCharacter = CreateCharacter.createPlayer(userCharacter);
                 System.out.println("Done");
+
                 break;
             case 2:
                 assignCharacter.select(userCharacter);

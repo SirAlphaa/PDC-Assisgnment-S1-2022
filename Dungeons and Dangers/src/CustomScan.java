@@ -89,4 +89,11 @@ public class CustomScan {
         }
         return returnString;
     }
+
+    public static void enterToContinue(){
+        FancyPrint.setDelay("Press Enter to Continue", 20);
+        Scanner sc = new Scanner(System.in);
+        FancyPrint.userInputArea();
+        sc.nextLine();
+    }
 }

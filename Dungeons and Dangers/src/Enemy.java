@@ -45,7 +45,7 @@ public class Enemy extends Character{
             damage = 8;
             break;
           case 2:
-            attackName = "Stab";
+            attackName = "Slash";
             damage = 10;
             break;
           case 3:

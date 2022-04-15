@@ -122,11 +122,10 @@ public abstract class Character {
    }
 
    public void printStats() {
-      System.out.println(name);
-      System.out.println(gender);
-      System.out.println(role);
-      System.out.println(weapon);
-      System.out.println(healthPoints);
+      FancyPrint.setDelay("Current Stats for " + name + ":", 20, true);
+      FancyPrint.setDelay("Gender and Role   | " + gender +" "+ role , 20, true);
+      FancyPrint.setDelay("Weapon            | " + weapon, 20, true);
+      FancyPrint.setDelay("Health Points     | " + healthPoints, 20, true);
    }
 
    public int getHP() {
@@ -195,7 +194,7 @@ public abstract class Character {
 //       FancyPrint.setDelay("For Magic input (2) ", 20, true);
 //       int choice = CustomScan.scanInt();
 
-//       //FIXME: I have a headache so Ill fix this another time properly
+//       // I have a headache so Ill fix this another time properly
 //       switch (choice) {
 //          case 1:
 //             if (weapon.equals("002")) {
