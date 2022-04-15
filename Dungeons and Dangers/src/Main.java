@@ -18,7 +18,7 @@ public class Main {
         boolean looper = true;
         
         // Enemy enemy = new Enemy();
-        // userCharacter.setCharacter("Testman", 213);
+        // userCharacter.setCharacter("Testman", 223);
         // Battle.start(userCharacter, 1);
         
         // = Opening Title Screen to MainMenu

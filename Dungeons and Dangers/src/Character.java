@@ -41,8 +41,10 @@ public abstract class Character {
             break;
 
          }
-      FancyPrint.setDelay(name + " takes " + totalDamagetaken, 20, true);
+      FancyPrint.setDelay(name + " takes " + totalDamagetaken + " points of damage", 20, true);
       healthPoints = healthPoints - totalDamagetaken;
+      FancyPrint.setDelay(name +" now has " + healthPoints + " health points", 20, true);
+      FancyPrint.newLine();
    };
 
    /**
@@ -93,6 +95,20 @@ public abstract class Character {
             weapon = "Gun";
             break;
       }
+   }
+
+   /**
+    * 
+    * @return Returns if the character is still alive.
+    */
+   public boolean isAlive(){
+      boolean isAlive;
+      if (healthPoints > 0) {
+         isAlive = true;
+      } else {
+         isAlive = false;
+      }
+      return isAlive;
    }
 
    /**
