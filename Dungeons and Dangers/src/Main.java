@@ -24,7 +24,7 @@ public class Main {
         // = Opening Title Screen to MainMenu
         // ======================================================
         clearScreen();
-        openingScreen();
+        //openingScreen();
         uIntInput = CustomScan.scanIntBetween(1, 3);
 
 
