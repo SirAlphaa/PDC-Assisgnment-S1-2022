@@ -4,6 +4,12 @@ Authors: Salman Ali, Nathan D. Flanagan
 
 Goal: Create a Simple Role Playing Game using technics learnt our Program Design & Construction class
 
+===================================================================================================
+
+PLEASE RUN THIS PROJECT IN VSCODE, we could not convert the project to work in Netbeans 
+
+===================================================================================================
+
 Folder Details
 - `src`: the folder to maintain sources
 - `lib`: the folder to maintain dependencies
@@ -13,7 +19,7 @@ Storyboard
     1) Starts Up
     2) Existing or new character
     3) Make or load character
-    4) Pick which place to conquer
+    4) Run the dungeon 
     5) Game starts
 
 Classes
@@ -29,6 +35,11 @@ Key         value
 Name        Attributes
 "Salman"	"122" => “Male,Mage,Staff” 
 
+===================================================================================================
+Attributes
+1st digit 	= Gender 		{Male , Female}
+2nd digit 	= Role 			{Mage, knight, Assassin, Soldier}
+3rd digit	= Weapon 		{Staff, Sword, Dagger, Gun} 
 ===================================================================================================
 sudo code for battles?
 Character 
@@ -58,9 +69,4 @@ battle
 			enemy.hp = usercharac.attack()
 			if enem.hp = 0 
 			userchar = enemy.attack()
-
 ===================================================================================================
-Attributes
-1st digit 	= Gender 		{Male , Female}
-2nd digit 	= Role 			{Mage, knight, Assassin, Soldier}
-3rd digit	= Weapon 		{Staff, Sword, Dagger, Gun} 
