@@ -8,6 +8,8 @@ Goal: Create a Simple Role Playing Game using technics learnt our Program Design
 
 PLEASE RUN THIS PROJECT IN VSCODE, we could not convert the project to work in Netbeans 
 
+We can also provide a GItHub link for this project if requested 
+
 ===================================================================================================
 
 Folder Details
