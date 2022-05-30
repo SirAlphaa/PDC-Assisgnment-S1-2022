@@ -1,3 +1,5 @@
+import group69salmannathan.FancyPrint;
+import group69salmannathan.RandomGenerator;
 
 public class Enemy extends Character{
 

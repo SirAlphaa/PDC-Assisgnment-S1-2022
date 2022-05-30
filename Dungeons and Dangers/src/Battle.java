@@ -1,5 +1,12 @@
+import group69salmannathan.CustomScan;
+import group69salmannathan.Enemy;
+import group69salmannathan.FancyPrint;
+import group69salmannathan.FileInterface;
+import group69salmannathan.Main;
+import group69salmannathan.RandomGenerator;
+import group69salmannathan.UserCharacter;
 
-public class battle {
+public class Battle {
 
 
     /**

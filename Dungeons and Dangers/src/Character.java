@@ -1,3 +1,5 @@
+import group69salmannathan.FancyPrint;
+
 public abstract class Character {
 
    String name, weapon, gender, role;

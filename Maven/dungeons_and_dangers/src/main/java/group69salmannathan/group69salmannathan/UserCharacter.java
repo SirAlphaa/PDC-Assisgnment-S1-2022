@@ -1,6 +1,6 @@
 package group69salmannathan;
 
-
+//import Character;
 
 public class UserCharacter extends Character{
 

@@ -1,5 +1,11 @@
 import java.util.HashMap;
 
+import group69salmannathan.CustomScan;
+import group69salmannathan.FancyPrint;
+import group69salmannathan.FileInterface;
+import group69salmannathan.Main;
+import group69salmannathan.UserCharacter;
+
 public class assignCharacter {
     
     /**

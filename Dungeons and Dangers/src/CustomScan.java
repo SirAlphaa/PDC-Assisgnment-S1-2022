@@ -1,6 +1,8 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import group69salmannathan.FancyPrint;
+
 public class CustomScan {
 
     /**

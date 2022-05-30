@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import group69salmannathan.UserCharacter;
+
 public class Main {
 
     public static void main(String[] args) {
