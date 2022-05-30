@@ -1,5 +1,7 @@
+package group69salmannathan;
 
-public class battle {
+
+public class Battle {
 
 
     /**
