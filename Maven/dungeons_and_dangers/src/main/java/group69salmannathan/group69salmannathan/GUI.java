@@ -26,7 +26,7 @@ public class GUI
     jframe.add(jPanel, BorderLayout.CENTER);
     jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     jframe.setTitle("Opening Scene");
-    jframe.pack();
+    //jframe.pack();
     jframe.setVisible(true);
   }  
 
