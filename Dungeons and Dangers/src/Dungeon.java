@@ -41,7 +41,7 @@ public class Dungeon
     Main.sleep(3000);
     Enemy baron = new Enemy();
     baron.setCharacter("The Baron Nashor", 121);
-    battle.start(user, baron, 3);
+    Battle.start(user, baron, 3);
     FancyPrint.setDelay("YOU HAVE CONQUERED DUNGEONS AND DRAGONS, WINDHELM IS SAVED!", 100, true);
   }
 
@@ -51,7 +51,7 @@ public class Dungeon
     FancyPrint.setDelay("He looks really relaxed.", 10, true);
     Main.sleep(3000);
     //Queue battle class to start battle.
-    battle.start(user, 1);
+    Battle.start(user, 1);
   }
 
   public static void rightPath(UserCharacter user)
@@ -59,6 +59,6 @@ public class Dungeon
     FancyPrint.setDelay("You walk for what seems for days but you dont feel exhausted nor are hungry or thirsty.", 10, true);
     FancyPrint.setDelay("You end up at a huge arena, an enemy emerges from the shadows!", 10, true);
     Main.sleep(3000);
-    battle.start(user, 2);
+    Battle.start(user, 2);
   }
 }

@@ -15,10 +15,11 @@ public class GUI
     JFrame jframe = new JFrame();
     
     JButton jButton = new JButton("Click");
+
     JLabel jLabel = new JLabel("Number of clicks: 0");
 
     JPanel jPanel = new JPanel();
-    jPanel.setBorder(BorderFactory.createEmptyBorder(30, 30, 10, 30));
+    jPanel.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
     jPanel.setLayout(new GridLayout());
     jPanel.add(jButton);
     jPanel.add(jLabel);
@@ -26,7 +27,7 @@ public class GUI
     jframe.add(jPanel, BorderLayout.CENTER);
     jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     jframe.setTitle("Opening Scene");
-    //jframe.pack();
+    jframe.pack();
     jframe.setVisible(true);
   }  
 

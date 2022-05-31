@@ -1,6 +1,5 @@
 package group69salmannathan;
 
-
 public class Battle {
 
 
