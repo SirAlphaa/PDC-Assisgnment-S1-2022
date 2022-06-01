@@ -9,9 +9,7 @@ import javax.swing.JPanel;
 import javafx.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javafx.scene.control.Label;
-
 import java.awt.event.*; 
-
 import java.awt.*;
 
 public class GUI implements ActionListener
@@ -20,24 +18,26 @@ public class GUI implements ActionListener
 
   private static JFrame jframe;
   private static JLabel jLabel;
+  private static JButton button1;
+  private static JPanel jPanel;
 
   public static void Intro()
   { 
     jframe = new JFrame();
     
-    JButton button1 = new JButton("Click");
+    button1 = new JButton("Click");
    // JButton button2 = new JButton("LMAO");
     //JButton button3 = new JButton("ROFL");
     button1.setPreferredSize(new Dimension(300,300));
     //button2.setPreferredSize(new Dimension(70,30));
    // button3.setPreferredSize(new Dimension(70,30));
-    button1.addActionListener(this);
+    button1.addActionListener(Dungeon); //FIXME: Idk how to fix this tbh.
 
-    jLabel = new JLabel("Number of clicks: ");
+    jLabel = new JLabel("Number of clicks: 0");
     //jLabel.setAlignmentX(alignmentX);
     //jLabel.setAlignmentY(alignmentY);
 
-    JPanel jPanel = new JPanel();
+    jPanel = new JPanel();
     jPanel.setBorder(BorderFactory.createEmptyBorder(300, 550, 300, 550));
     jPanel.setLayout(new GridLayout());
     jPanel.add(button1);
@@ -56,17 +56,17 @@ public class GUI implements ActionListener
 
   public static void Battle()
   {
-    //Write da GUI for battle stuff
+    //TODO: Write da GUI for battle stuff
   }
 
   public static void DungeonChoice()
   {
-    //Write GUI for the dungeon choice
+    //TODO: Write GUI for the dungeon choice
   }
 
   public static void Story()
   {
-    //Write GUI for story elements
+    //TODO: Write GUI for story elements
   }
 
   public static void main(String[] args) 
@@ -76,15 +76,9 @@ public class GUI implements ActionListener
   }
 
   @Override
-  public void actionPerformed(ActionEvent e) 
+  public void actionPerformed(java.awt.event.ActionEvent e) 
   {
     count++;
     jLabel.setText("Number of clicks: " + count);
-  }
-
-  @Override
-  public void actionPerformed(java.awt.event.ActionEvent e) {
-    // TODO Auto-generated method stub
-    
   }
 }
