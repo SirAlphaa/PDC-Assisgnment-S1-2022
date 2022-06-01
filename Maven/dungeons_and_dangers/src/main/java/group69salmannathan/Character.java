@@ -2,10 +2,10 @@ package group69salmannathan;
 
 public abstract class Character {
 
-    public String name;
-    public String weapon;
+    protected String name;
+    protected String weapon;
     String gender;
-    public String role;
+    protected String role;
     int healthPoints, attributes; 
  
     /**
