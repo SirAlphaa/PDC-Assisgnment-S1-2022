@@ -6,7 +6,11 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javafx.event.ActionEvent;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.plaf.basic.BasicTabbedPaneUI.MouseHandler;
+
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javafx.scene.control.Label;
 import java.awt.event.*; 
@@ -19,6 +23,8 @@ public class GUI implements ActionListener
   private static JFrame jframe;
   private static JLabel jLabel;
   private static JButton button1;
+  private static JButton button2;
+  private static JButton button3;
   private static JPanel jPanel;
 
   public static void Intro()
@@ -26,33 +32,51 @@ public class GUI implements ActionListener
     jframe = new JFrame();
     
     button1 = new JButton("Click");
-   // JButton button2 = new JButton("LMAO");
-    //JButton button3 = new JButton("ROFL");
-    button1.setPreferredSize(new Dimension(300,300));
-    //button2.setPreferredSize(new Dimension(70,30));
-   // button3.setPreferredSize(new Dimension(70,30));
-    button1.addActionListener(Dungeon); //FIXME: Idk how to fix this tbh.
+    button2 = new JButton("LMAO");
+    button3 = new JButton("ROFL");
+    button1.setPreferredSize(new Dimension(30,30));
+    button2.setPreferredSize(new Dimension(30,30));
+    button3.setPreferredSize(new Dimension(30,30));
+   // button1.addActionListener(Dungeon); //FIXME: Idk how to fix this tbh.
 
-    jLabel = new JLabel("Number of clicks: 0");
+    jLabel = new JLabel("Okay guys welcome to Fortnite" + 
+    " in todays viedoe I will be talking about FOrtnite stuff such as how to play the game how");
+    //jLabel.add(jPanel, BorderLayout.NORTH);
     //jLabel.setAlignmentX(alignmentX);
     //jLabel.setAlignmentY(alignmentY);
 
     jPanel = new JPanel();
     jPanel.setBorder(BorderFactory.createEmptyBorder(300, 550, 300, 550));
     jPanel.setLayout(new GridLayout());
-    jPanel.add(button1);
-    //jPanel.add(button2);
-    //jPanel.add(button3);
     jPanel.add(jLabel);
+    jPanel.add(button1);
+    button1.addMouseListener(null); //TODO: Work on this
+    jPanel.add(button2);
+    jPanel.add(button3);
+    //jPanel.add(jLabel);
 
-    jframe.add(jPanel, BorderLayout.CENTER);
+    jframe.add(jPanel, BorderLayout.WEST);
     jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    jframe.setTitle("Opening Scene");
+    jframe.setTitle("Title Screen");
+    //jframe.setSize(620, 420);
     jframe.pack();
     jframe.setVisible(true);
 
     //TODO: Actually work on this
   }  
+
+  /*public void setButtonListener()
+  {
+    ActionListener buttonListener = new ActionListener();
+    {
+      @Override
+      public void actionPerformed(ActionEvent e) 
+      {
+        count++;
+        jLabel.setText("Number of clicks: " + count);
+      }
+    };
+  } */
 
   public static void Battle()
   {
@@ -76,9 +100,9 @@ public class GUI implements ActionListener
   }
 
   @Override
-  public void actionPerformed(java.awt.event.ActionEvent e) 
+  public void actionPerformed(ActionEvent e) 
   {
     count++;
-    jLabel.setText("Number of clicks: " + count);
+    jLabel.setText("Number of clicks: %d" + count);
   }
 }
