@@ -1,5 +1,6 @@
 package group69salmannathan;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class Main {
@@ -10,9 +11,10 @@ public class Main {
         
         //=== Opening Title Screen to MainMenu ====================================================
         clearScreen();
+        System.out.println(new File(".").getAbsoluteFile());
         //openingScreen();
         uIntInput = CustomScan.scanIntBetween(1, 3);
-
+        //TODO: Write JFrame to the uIntInput variable.
         //=== Main Menu options ===================================================================
         clearScreen();
         switch (uIntInput) {

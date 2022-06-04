@@ -17,7 +17,7 @@ public class FileInterface {
      * @return a string array
      */
 
-    static String filePath = "src/main/resources/";
+    static String filePath = "dungeons_and_dangers/src/main/resources/";
 
     public static String[] readRecordsString(String fileName, String key) {
         String[] returnMe = {};
