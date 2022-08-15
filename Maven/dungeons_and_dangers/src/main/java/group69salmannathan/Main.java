@@ -12,7 +12,7 @@ public class Main {
         //=== Opening Title Screen to MainMenu ====================================================
         clearScreen();
         System.out.println(new File(".").getAbsoluteFile());
-        //openingScreen();
+        openingScreen();
         uIntInput = CustomScan.scanIntBetween(1, 3);
         //TODO: Write JFrame to the uIntInput variable.
         //=== Main Menu options ===================================================================

@@ -13,7 +13,7 @@ import javax.swing.plaf.basic.BasicTabbedPaneUI.MouseHandler;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javafx.scene.control.Label;
+// import javafx.scene.control.Label;
 import java.awt.event.*; 
 import java.awt.*;
 
